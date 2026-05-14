@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товарів</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../main/style.css">
+    <link rel="stylesheet" href="catalog.css">
+</head>
+<body>
+    <div class="main_content">
+        <div class="top-banner">
+            <div class="banner-container">
+                <img src="../Tovar/header.jpg" alt="Рекламний банер іграшок">
+            </div>
+        </div> 
+
+        <header class="top-header">
+            <div class="header-container">
+                <a href="../main/index.html" class="logo">
+                    <span>Іграшковий</span> магазинчик
+                </a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Що ви шукаєте?">
+                    <button id="searchBtn">Пошук</button>
+                </div>
+                <div class="header-actions">
+                </div>
+            </div>
+        </header>
+        
+        <nav>
+            <a href="../catalog/catalog.php" class="catalog-btn">
+                <i class="fa-solid fa-bars"></i>
+                <span>Каталог</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../brands/brands.html">Бренди</a></li>
+                <li><a href="../dostavka/oplata.html">Оплата та доставка</a></li>
+                <li><a href="../kontakti/kontakti.html">Контакти</a></li>
+            </ul>
+        </nav>
+        
+        <main class="content-wrapper">
+            <aside class="sidebar">
+                <div class="sidebar-block">
+                    <h3>Ціна (грн)</h3>
+                    <div class="price-box">
+                        <input type="range" min="0" max="5000" value="5000" class="price-slider" id="priceSlider">
+                        <div class="price-values">
+                            <span>0 грн</span>
+                            <span id="priceValue">5000 грн</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="products-section">
+                <h2 id="catalogTitle">Результати пошуку</h2>
+                
+                <div class="catalog-grid" id="catalogGrid">
+                    <?php if (empty($products)): ?>
+                        <p id="php-empty" style="display: block; width: 100%; text-align: center; font-size: 1.2rem; padding: 20px;">
+                            На жаль, у цій категорії поки що немає товарів.
+                        </p>
+                    <?php else: ?>
+                        <?php foreach ($products as $product): ?>
+                            <div class="card_image" data-offer="">
+                                <a href="../product/product.php?id=<?= $product['goodsid'] ?>" style="text-decoration: none; color: inherit; display: contents;">
+                                    <img src="../admin_panel/upload/images/<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['namemodel']) ?>">
+                                    <p class="product-title"><?= htmlspecialchars($product['namemodel']) ?></p>
+                                </a>
+                                <p class="product-price"><?= number_format($product['price'], 0, '', ' ') ?> грн</p>
+                                <button class="buy-btn" data-id="<?= $product['goodsid'] ?>" data-name="<?= htmlspecialchars($product['namemodel']) ?>" data-price="<?= $product['price'] ?>" data-image="<?= htmlspecialchars($product['image']) ?>">Додати до кошика</button>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </div>
+            </section>
+        </main>
+        
+        <footer>Розробник: Іванченко Олександр студент групи ІТ-31/2</footer>
+    </div>
+    
+    <script src="check_user.js"></script>
+    <script src="../koshik/cart.js"></script>
+    <script src="catalog.js"></script>
+    <script src="../main/poshuk.js"></script>
+</body>
+</html>

@@ -1,0 +1,684 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9fb;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main_content {
+    position: relative;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== БАНЕР ===== */
+.top-banner {
+    background-color: #e9008c;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-container {
+    width: 100%;
+    max-width: 1050px;
+}
+
+.banner-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== ХЕДЕР ===== */
+.top-header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.top-header .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: #e9008c;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #ff7f50;
+}
+
+/* ===== ПОШУК ===== */
+.search-box {
+    display: flex;
+    flex-grow: 1;
+    max-width: 600px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid #efefef;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    font-size: 15px;
+    outline: none;
+    background-color: #f5f5f5;
+    transition: 0.3s;
+}
+
+.search-box input:focus {
+    background-color: #fff;
+    border-color: #e9008c;
+}
+
+.search-box button {
+    background-color: #e9008c;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 0 8px 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #c00075;
+}
+
+/* ===== ІКОНКИ ХЕДЕРА ===== */
+.header-actions {
+    display: flex;
+    gap: 25px;
+}
+
+.action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.action-item:hover {
+    color: #e9008c;
+}
+
+.icon-wrap {
+    position: relative;
+    font-size: 24px;
+    margin-bottom: 3px;
+    color: #4b4bbd;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #e9008c;
+    color: white;
+    font-size: 11px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+/* ===== НАВІГАЦІЯ ===== */
+nav {
+    background-color: #ff7f50;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+/* ===== КНОПКА КАТАЛОГ ===== */
+.catalog-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #e9008c;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    border-radius: 8px;
+    margin-right: 30px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.catalog-btn i {
+    font-size: 18px;
+}
+
+.catalog-btn:hover {
+    background-color: #c00075;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(233, 0, 140, 0.3);
+}
+
+/* ===== МЕНЮ ===== */
+nav .nav-menu {
+    display: flex;
+    gap: 5px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav .nav-menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav .nav-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+/* ===== ОСНОВНИЙ КОНТЕНТ ===== */
+.content-wrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* ===== САЙДБАР ===== */
+.sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.sidebar h3 {
+    margin-bottom: 15px;
+    color: #e9008c;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.filter-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.filter-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* ===== СЕКЦІЯ ТОВАРІВ ===== */
+.products-section {
+    flex-grow: 1;
+    min-width: 0;
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+    padding: 0 10px;
+}
+
+.products-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* ===== СЛАЙДЕР ===== */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide {
+    min-width: 100%;
+}
+.slide img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #e9008c;
+    font-size: 20px;
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.slider-btn:hover { 
+    background: #e9008c; 
+    color: #fff; 
+}
+
+.prev-btn { left: 15px; }
+.next-btn { right: 15px; }
+
+.slider-dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active { 
+    background: #e9008c; 
+    width: 25px; 
+    border-radius: 10px; 
+}
+
+/* ===== КАРУСЕЛЬ ТОВАРІВ ===== */
+.products-grid {
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;
+    align-items: center;
+}
+
+.products-carusel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 15px 5px;
+    scrollbar-width: none;
+    width: 100%;
+}
+
+.products-carusel::-webkit-scrollbar {
+    display: none;
+}
+
+.card_image {
+    flex: 0 0 220px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 340px;
+}
+
+.card_image img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain; 
+    margin-bottom: 15px;
+}
+
+.product-title {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    flex-grow: 1; 
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #e9008c;
+    margin-bottom: 15px;
+}
+
+.card_image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.buy-btn {
+    background: #ff7f50;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: auto;
+    transition: opacity 0.2s ease, visibility 0.2s ease, background-color 0.3s ease; 
+    opacity: 0; 
+    visibility: hidden; 
+}
+
+.card_image:hover .buy-btn {
+    opacity: 1; 
+    visibility: visible;
+}
+
+.buy-btn:hover { 
+    background: #e9008c; 
+}
+
+/* ===== СТРІЛКИ КАРУСЕЛІ ===== */
+.btn-carusel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: 1px solid #ddd;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #e9008c;
+    font-size: 20px;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-carusel:hover {
+    background: #e9008c;
+    color: #fff;
+    border-color: #e9008c;
+}
+
+.prev { left: -20px; }
+.next { right: -20px; }
+
+/* ===== БРЕНД КОНТЕНТ ===== */
+.brands-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.brands-section h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.brands-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    padding: 12px 24px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    background-color: white;
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tab-btn:hover {
+    color: #e9008c;
+    transform: translateY(-2px);
+}
+
+.tab-btn.active {
+    border-color: #1793b8;
+    color: #1793b8;
+    background-color: #f5fcff;
+}
+
+.tab-content-box {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    min-height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    text-align: left;
+}
+
+.brand-content img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.brand-content h3 {
+    font-size: 24px;
+    color: #e9008c;
+    margin-bottom: 12px;
+}
+
+.brand-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* ===== ФУТЕР ===== */
+footer {
+    flex-shrink: 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    margin-top: auto;
+    z-index: 10;
+}
+
+/* ===== АДАПТИВНІСТЬ ===== */
+@media screen and (max-width: 768px) {
+    .btn-carusel {
+        display: none !important;
+    }
+    
+    .products-carusel {
+        padding: 15px 10px;
+        gap: 15px;
+        scroll-snap-type: x mandatory;
+    }
+
+    .card_image {
+        flex: 0 0 200px;
+        min-height: 300px;
+        scroll-snap-align: center;
+    }
+
+    .top-header .header-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .search-box {
+        width: 100%;
+        max-width: 100%;
+        order: 2;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: space-around;
+        order: 3;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .nav-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+        gap: 8px;
+    }
+    
+    .catalog-btn {
+        margin-right: 0;
+        padding: 10px 20px;
+        border-radius: 8px;
+    }
+
+    nav .nav-menu {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    
+    nav .nav-menu li a {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .content-wrapper {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .products-carusel {
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden; 
+        gap: 15px;
+    }
+
+    .card_image {
+        width: 100%;
+    }
+
+    .slide img {
+        height: 200px;
+    }
+        .brand-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .brand-content img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .tab-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .tab-content-box {
+        padding: 20px;
+    }
+}

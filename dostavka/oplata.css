@@ -1,0 +1,86 @@
+h1{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.section-subtitle {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.info-section {
+    padding: 20px 0;
+}
+
+.section-subtitle {
+    margin-left: 10px;
+    margin-bottom: 25px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px; 
+}
+.info-page .section-subtitle i {
+    color: #ff7f50;
+}
+
+.info-card .icon-wrap i {
+    color: #ff7f50; 
+}
+
+.info-card .fa-apple-pay {
+    color: #000 !important;
+}
+.section-subtitle i {
+    color: #e9008c; 
+}
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.info-card {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.brand-mini-logo {
+    height: 40px;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
+.info-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    color: #222;
+}
+
+.info-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.price-tag {
+    display: inline-block;
+    padding: 5px 15px;
+    background: #fff0f6;
+    color: #e9008c;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}

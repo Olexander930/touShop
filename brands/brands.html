@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин дитячих іграшок</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../main/style.css">
+    <link rel="stylesheet" href="brands.css">
+</head>
+<body>
+    <div class="main_content">
+        <div class="top-banner">
+            <div class="banner-container">
+                <img src="../Tovar/header.jpg" alt="Рекламний банер іграшок">
+            </div>
+        </div>
+        <header class="top-header">
+            <div class="header-container">
+                <a href="../main/index.html" class="logo">
+                    <span>Іграшковий</span> магазинчик
+                </a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Що ви шукаєте?">
+                    <button id="searchBtn">Пошук</button>
+                </div>
+                <div class="header-actions">
+                </div>
+            </div>
+        </header>
+        <nav>
+            <a href="../catalog/catalog.php" class="catalog-btn">
+                <i class="fa-solid fa-bars"></i>
+                <span>Каталог</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../brands/brands.html">Бренди</a></li>
+                <li><a href="../dostavka/oplata.html">Оплата та доставка</a></li>
+                <li><a href="../kontakti/kontakti.html">Контакти</a></li>
+            </ul>
+        </nav>
+        <main class="brands-page">
+            <div class="brands-container">
+                <h1 class="page-title">Наші улюблені бренди</h1>
+                
+                <div class="alphabet-filter" id="alphabetFilter">
+                    <button class="letter-btn active">Всі</button>
+                    <button class="letter-btn">A</button>
+                    <button class="letter-btn">B</button>
+                    <button class="letter-btn">C</button>
+                    <button class="letter-btn">D</button>
+                    <button class="letter-btn">F</button>
+                    <button class="letter-btn">H</button>
+                    <button class="letter-btn">L</button>
+                    <button class="letter-btn">M</button>
+                </div>
+
+                <div class="brands-grid" id="brandsGrid">
+                    <a href="#" class="brand-card">
+                        <div class="brand-logo-wrap">
+                            <img src="../brand/lego.png" alt="LEGO">
+                        </div>
+                        <h3>LEGO</h3>
+                    </a>
+                    
+                    <a href="#" class="brand-card">
+                        <div class="brand-logo-wrap">
+                            <img src="../brand/cubicfun.png" alt="Cubic Fun">
+                        </div>
+                        <h3>Cubic Fun</h3>
+                    </a>
+                    
+                    <a href="#" class="brand-card">
+                        <div class="brand-logo-wrap">
+                            <img src="../brand/hotweels.png" alt="Hot Wheels">
+                        </div>
+                        <h3>Hot Wheels</h3>
+                    </a>
+
+                    <a href="#" class="brand-card">
+                        <div class="brand-logo-wrap">
+                            <img src="../brand/disney.png" alt="Disney">
+                        </div>
+                        <h3>Disney</h3>
+                    </a>
+                    <a href="#" class="brand-card">
+                        <div class="brand-logo-wrap">
+                            <img src="../brand/doh.png" alt="Play-Doh">
+                        </div>
+                        <h3>Play-Doh</h3>
+                    </a>
+                    <a href="#" class="brand-card">
+                        <div class="brand-logo-wrap">
+                            <img src="../brand/doka.png" alt="DOKA">
+                        </div>
+                        <h3>DOKA</h3>
+                    </a>
+                    <a href="#" class="brand-card">
+                        <div class="brand-logo-wrap">
+                            <img src="../brand/funco.png" alt="Funko">
+                        </div>
+                        <h3>Funko</h3>
+                    </a>
+                    <a href="#" class="brand-card">
+                        <div class="brand-logo-wrap">
+                            <img src="../brand/lol.png" alt="LoL">
+                        </div>
+                        <h3>LoL</h3>
+                    </a>
+                    <a href="#" class="brand-card">
+                        <div class="brand-logo-wrap">
+                            <img src="../brand/tobot.png" alt="Tobot">
+                        </div>
+                        <h3>Tobot</h3>
+                    </a>
+                    <a href="#" class="brand-card">
+                        <div class="brand-logo-wrap">
+                            <img src="../brand/art.png" alt="ArtCraft">
+                        </div>
+                        <h3>ArtCraft</h3>
+                    </a>
+                </div>
+            </div>
+        </main>
+        <footer>Розробник: Іванченко Олександр студент групи ІТ-31/2</footer>
+    </div>
+    
+    <script src="../koshik/cart.js"></script>
+    <script src="../main/check_user.js"></script>
+    <script src="../main/poshuk.js"></script>
+</body>
+</html>

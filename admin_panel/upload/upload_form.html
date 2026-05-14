@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завантаження зображення | Адмінка</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="upload_form.css">
+</head>
+<body>
+
+<div class="upload-container">
+    <h1>Додати фото товару</h1>
+
+    <form action="upload_product.php" method="POST" enctype="multipart/form-data" id="uploadForm">
+
+
+        <div class="form-group">
+            <label for="category">Категорія товару:</label>
+            <select name="category" id="category" required>
+                <option value="constructors">Конструктори</option>
+                <option value="cars">Машинки</option>
+                <option value="dolls">Ляльки</option>
+                <option value="board_games">Настільні ігри</option>
+                <option value="soft_toys">М'які іграшки</option>
+                <option value="educational">Розвиваючі іграшки</option>
+                <option value="baby_toys">Іграшки для немовлят</option>
+                <option value="school_items">Товари для школи</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="product_id">ID товару (номер):</label>
+            <input type="number" name="product_id" id="product_id" placeholder="Наприклад: 1" required>
+        </div>
+
+        <label for="imageInput" class="custom-file-upload" id="dropZone">
+            <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.36 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
+            </svg>
+            <span id="labelText" class="label-text">Натисніть для вибору файлу</span>
+            <p id="fileName" class="file-name"></p>
+        </label>
+
+        <input type="file" name="image" id="imageInput" hidden required accept="image/*">
+
+        <div class="btn-group">
+            <button type="reset" id="resetBtn" class="btn-reset">Очистити</button>
+            <button type="submit" name="add" class="btn-submit">Завантажити</button>
+        </div>
+        <div class="back-wrapper">
+            <a href="../dashboard/admin_dashboard.php" class="btn-back">Назад</a>
+        </div>
+    </form>
+</div>
+
+<script src="upload.js"></script>
+
+</body>
+</html>

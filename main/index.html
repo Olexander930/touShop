@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин дитячих іграшок</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main_content">
+        <div class="top-banner">
+            <div class="banner-container">
+                <img src="../Tovar/header.jpg" alt="Рекламний банер іграшок">
+            </div>
+        </div>
+        <header class="top-header">
+            <div class="header-container">
+                <a href="index.html" class="logo">
+                    <span>Іграшковий</span> магазинчик
+                </a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Що ви шукаєте?">
+                    <button id="searchBtn">Пошук</button>
+                </div>
+                <div class="header-actions">
+                </div>
+            </div>
+        </header>
+        <nav>
+            <a href="../catalog/catalog.php" class="catalog-btn">
+                <i class="fa-solid fa-bars"></i>
+                <span>Каталог</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../brands/brands.html">Бренди</a></li>
+                <li><a href="../dostavka/oplata.html">Оплата та доставка</a></li>
+                <li><a href="../kontakti/kontakti.html">Контакти</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Слайдер -->
+        <section class="products-section">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide"><img src="../Slider/slider_1.jpg" alt="Слайд 1"></div>
+                    <div class="slide"><img src="../Slider/slider_2.jpg" alt="Слайд 2"></div>
+                    <div class="slide"><img src="../Slider/slider_3.jpg" alt="Слайд 3"></div>
+                    <div class="slide"><img src="../Slider/slider_4.jpg" alt="Слайд 4"></div>
+                    <div class="slide"><img src="../Slider/slider_5.jpg" alt="Слайд 5"></div>
+                </div>
+                <button class="slider-btn prev-btn">❮</button>
+                <button class="slider-btn next-btn">❯</button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Хіт продажів -->
+        <section class="products-section">
+            <h2>Хіт продажів</h2>
+            <div class="products-grid">
+                <button class="btn-carusel prev">❮</button>
+                <div class="products-carusel">
+                    <div class="card_image">
+                        <img src="../Tovar/image_1.jpg" alt="Потяг">
+                        <p class="product-title">Іграшковий потяг</p>
+                        <p class="product-price">100 грн</p>
+                        <button class="buy-btn" data-id="json_1" data-name="Іграшковий потяг" data-price="100" data-image="image_1.jpg">Додати до кошика</button>
+                    </div>
+
+                    <div class="card_image">
+                        <img src="../Tovar/image_2.jpg" alt="Піраміда">
+                        <p class="product-title">Іграшкова піраміда</p>
+                        <p class="product-price">150 грн</p>
+                        <button class="buy-btn" data-id="json_2" data-name="Іграшкова піраміда" data-price="150" data-image="image_2.jpg">Додати до кошика</button>
+                    </div>
+
+                    <div class="card_image">
+                        <img src="../Tovar/image_3.jpg" alt="Сова">
+                        <p class="product-title">Іграшкова сова</p>
+                        <p class="product-price">200 грн</p>
+                        <button class="buy-btn" data-id="json_3" data-name="Іграшкова сова" data-price="200" data-image="image_3.jpg">Додати до кошика</button>
+                    </div>
+
+                    <div class="card_image">
+                        <img src="../Tovar/image_4.jpg" alt="Ведмедик">
+                        <p class="product-title">Ведмедик</p>
+                        <p class="product-price">250 грн</p>
+                        <button class="buy-btn" data-id="json_4" data-name="Ведмедик" data-price="250" data-image="image_4.jpg">Додати до кошика</button>
+                    </div>
+
+                    <div class="card_image">
+                        <img src="../Tovar/image_5.jpg" alt="М'яка сова">
+                        <p class="product-title">М'яка сова</p>
+                        <p class="product-price">300 грн</p>
+                        <button class="buy-btn" data-id="json_5" data-name="М'яка сова" data-price="300" data-image="image_5.jpg">Додати до кошика</button>
+                    </div>
+
+                    <div class="card_image">
+                        <img src="../Tovar/image_6.jpg" alt="LEGO">
+                        <p class="product-title">Набір LEGO</p>
+                        <p class="product-price">350 грн</p>
+                        <button class="buy-btn" data-id="json_6" data-name="Набір LEGO" data-price="350" data-image="image_6.jpg">Додати до кошика</button>
+                    </div>
+                </div>
+                <button class="btn-carusel next">❯</button>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <h2>Новинки</h2>
+            <div class="products-grid">
+                <button class="btn-carusel prev">❮</button>
+                <div class="products-carusel">
+                    <div class="card_image">
+                        <img src="../Tovar/image_13.webp" alt="Bezzubik">
+                        <p class="product-title">Інтерактивна м'яка іграшка Беззубик</p>
+                        <p class="product-price">1600 грн</p>
+                        <button class="buy-btn" data-id="new_1" data-name="Інтерактивна м'яка іграшка Беззубик" data-price="1600" data-image="image_13.webp">Додати до кошика</button>
+                    </div>
+
+                    <div class="card_image">
+                        <img src="../Tovar/image_12.jpg" alt="Pistolety">
+                        <p class="product-title">Пістолет з мішенню і м'якими кулями</p>
+                        <p class="product-price">200 грн</p>
+                        <button class="buy-btn" data-id="new_2" data-name="Пістолет з мішенню і м'якими кулями" data-price="200" data-image="image_12.jpg">Додати до кошика</button>
+                    </div>
+
+                    <div class="card_image">
+                        <img src="../Tovar/image_9.webp" alt="Інтерактивна іграшка Wow Stuff – Стіч">
+                        <p class="product-title">Інтерактивна іграшка Wow Stuff – Стіч</p>
+                        <p class="product-price">2500 грн</p>
+                        <button class="buy-btn" data-id="new_3" data-name="Інтерактивна іграшка Wow Stuff – Стіч" data-price="2500" data-image="image_9.webp">Додати до кошика</button>
+                    </div>
+
+                    <div class="card_image">
+                        <img src="../Tovar/image_11.webp" alt="М'яка іграшка Хто я?">
+                        <p class="product-title">М'яка іграшка "Хто я?"</p>
+                        <p class="product-price">550 грн</p>
+                        <button class="buy-btn" data-id="new_4" data-name="М'яка іграшка \"Хто я?\"" data-price="550" data-image="image_11.webp">Додати до кошика</button>
+                    </div>
+
+                    <div class="card_image">
+                        <img src="../Tovar/image_10.jpg" alt="Набір наклейок Diramix K-POP Кей-Поп 5 шт у пакетику">
+                        <p class="product-title">Набір наклейок Diramix K-POP Кей-Поп 5 шт у пакетику</p>
+                        <p class="product-price">300 грн</p>
+                        <button class="buy-btn" data-id="new_5" data-name="Набір наклейок Diramix K-POP Кей-Поп 5 шт у пакетику" data-price="300" data-image="image_10.jpg">Додати до кошика</button>
+                    </div>
+
+                    <div class="card_image">
+                        <img src="../Tovar/image_10.webp" alt="Іграшковий камаз">
+                        <p class="product-title">Іграшковий камаз</p>
+                        <p class="product-price">370 грн</p>
+                        <button class="buy-btn" data-id="new_6" data-name="Іграшковий камаз" data-price="370" data-image="image_10.webp">Додати до кошика</button>
+                    </div>
+                    <div class="card_image">
+                        <img src="../Tovar/image_7.jpg" alt="М'яка іграшка хомяк">
+                        <p class="product-title">М'яка іграшка хомяк</p>
+                        <p class="product-price">890 грн</p>
+                        <button class="buy-btn" data-id="new_7" data-name="М'яка іграшка хомяк" data-price="890" data-image="image_7.jpg">Додати до кошика</button>
+                    </div>
+                    <div class="card_image">
+                        <img src="../Tovar/image_8.jpg" alt="М’яка іграшка «Пес Патрон»">
+                        <p class="product-title">М’яка іграшка «Пес Патрон»</p>
+                        <p class="product-price">900 грн</p>
+                        <button class="buy-btn" data-id="new_8" data-name="М’яка іграшка «Пес Патрон»" data-price="900" data-image="image_8.jpg">Додати до кошика</button>
+                    </div>
+                </div>
+                <button class="btn-carusel next">❯</button>
+            </div>
+        </section>
+
+        <section class="brands-section">
+            <h2>Популярні бренди</h2>
+            <div class="brands-tabs">
+                <button class="tab-btn active" onclick="ShowBrandTab(1)">LEGO</button>
+                <button class="tab-btn" onclick="ShowBrandTab(2)">Hot Wheels</button>
+                <button class="tab-btn" onclick="ShowBrandTab(3)">Barbie</button>
+                <button class="tab-btn" onclick="ShowBrandTab(4)">Fisher-Price</button>
+                <button class="tab-btn" onclick="ShowBrandTab(5)">Funko</button>
+            </div>
+            <div id="tab_content_box" class="tab-content-box">
+                <h3>LEGO</h3><p>Найкращі конструктори для розвитку уяви.</p>
+            </div>
+        </section>
+
+        <footer>Розробник: Іванченко Олександр студент групи ІТ-31/2</footer>
+    </div>
+    
+    <script src="../koshik/cart.js"></script>
+    <script src="check_user.js"></script>
+    <script src="script.js"></script>
+    <script src="tabs.js"></script>
+    <script src="poshuk.js"></script>
+</body>
+</html>

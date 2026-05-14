@@ -1,0 +1,80 @@
+h1{
+    margin-bottom:20px;
+    text-align: center;
+    margin-top: 35px;
+    color: #333;
+}
+.register_container{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-top: 5px solid #ff7f50;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#register_form input[type="text"],
+#register_form input[type="email"],
+#register_form input[type="password"]
+{
+   width: 100%;
+   padding: 12px;
+   margin-bottom: 15px;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   font-size: 14px;
+   outline: none;
+
+}
+#register_form input[type="text"]:focus,
+#register_form input[type="email"]:focus,
+#register_form input[type="password"]:focus {
+
+    border-color: #ff7f50;
+}
+.error_message {
+    color: red;
+    font-size: 13px;
+    margin-bottom: 10px;
+    display: none;
+}
+#register_form button[type="submit"] {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    background-color: #ff7f50;
+    color: white;
+    margin-top: 15px;
+}
+
+#register_form button[type="submit"]:hover {
+    background-color: #e85d2a; 
+}
+#register_form h3 {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #666;
+}
+.google-icon {
+    width: 80px;
+    margin: 0 auto;
+    display: block;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

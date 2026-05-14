@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій кошик</title>
+    <link rel="stylesheet" href="../main/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <div class="main_content">
+        <div class="top-banner">
+            <div class="banner-container">
+                <img src="../Tovar/header.jpg" alt="Рекламний банер іграшок">
+            </div>
+        </div>
+        
+        <header class="top-header">
+            <div class="header-container">
+                <a href="../main/index.html" class="logo">
+                    <span>Іграшковий</span> магазинчик
+                </a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Що ви шукаєте?">
+                    <button id="searchBtn">Пошук</button>
+                </div>
+                <div class="header-actions">
+                </div>
+            </div>
+        </header>
+        
+        <nav>
+            <a href="../catalog/catalog.php" class="catalog-btn">
+                <i class="fa-solid fa-bars"></i>
+                <span>Каталог</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../brands/brands.html">Бренди</a></li>
+                <li><a href="../dostavka/oplata.html">Оплата та доставка</a></li>
+                <li><a href="../kontakti/kontakti.html">Контакти</a></li>
+            </ul>
+        </nav>
+        
+        <main class="cart-page">
+            <h2 class="cart-title">
+                <i class="fa-solid fa-cart-shopping"></i> Мій кошик
+            </h2>
+            
+            <div id="basket-content">
+                <div class="cart-empty">
+                    <i class="fa-solid fa-cart-shopping cart-empty-icon"></i>
+                    <p>Кошик порожній</p>
+                </div>
+            </div>
+        </main>
+
+    </div> 
+    
+    <footer>Розробник: Іванченко Олександр студент групи ІТ-31/2</footer>
+    
+    <script src="cart.js"></script>
+    <script src="../main/check_user.js"></script>
+</body>
+</html>

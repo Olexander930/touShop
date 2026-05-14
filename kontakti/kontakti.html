@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин дитячих іграшок</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../main/style.css">
+    <link rel="stylesheet" href="kontakti.css">
+</head>
+<body>
+    <div class="main_content">
+        <div class="top-banner">
+            <div class="banner-container">
+                <img src="../Tovar/header.jpg" alt="Рекламний банер іграшок">
+            </div>
+        </div>
+        <header class="top-header">
+            <div class="header-container">
+                <a href="../main/index.html" class="logo">
+                    <span>Іграшковий</span> магазинчик
+                </a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Що ви шукаєте?">
+                    <button id="searchBtn">Пошук</button>
+                </div>
+                <div class="header-actions">
+                </div>
+            </div>
+        </header>
+        <nav>
+            <a href="../catalog/catalog.php" class="catalog-btn">
+                <i class="fa-solid fa-bars"></i>
+                <span>Каталог</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../brands/brands.html">Бренди</a></li>
+                <li><a href="../dostavka/oplata.html">Оплата та доставка</a></li>
+                <li><a href="../kontakti/kontakti.html">Контакти</a></li>
+            </ul>
+        </nav>
+        <main class="contacts-page">
+            <div class="container">
+                <h1 class="page-title">Зв'яжіться з нами</h1>
+
+                <div class="contacts-wrapper">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="icon-wrap"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <h3>Телефони</h3>
+                                <p><a href="tel:+380991234567">+38 (099) 123-45-67</a></p>
+                                <p><a href="tel:+380678658597">+38 (067) 865-85-97</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="icon-wrap"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <h3>Email</h3>
+                                <p><a href="mailto:info@toyshop.com.ua">napishit_nam@gmail.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="icon-wrap"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <h3>Адреса</h3>
+                                <p>м. Суми, вул. Харківська, 22<br>(ТЦ "Іграшковий Світ", 2 поверх)</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="icon-wrap"><i class="fa-regular fa-clock"></i></div>
+                            <div>
+                                <h3>Графік роботи</h3>
+                                <p>Пн-Пт: 09:00 - 20:00<br>Сб-Нд: 10:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <h2>Написати нам</h2>
+                        <p>Залишилися питання? Напишіть нам, і ми відповімо найближчим часом!</p>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Ваше ім'я</label>
+                                <input type="text" id="name" placeholder="Введіть своє ПІБ" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Ваш Email</label>
+                                <input type="email" id="email" placeholder="Введіть ваш e-mail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Повідомлення</label>
+                                <textarea id="message" rows="5" placeholder="Напишіть ваше питання або пропозицію тут..." required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Відправити повідомлення</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>Розробник: Іванченко Олександр студент групи ІТ-31/2</footer>
+        
+        <script src="../koshik/cart.js"></script>
+        <script src="../main/check_user.js"></script>
+        <script src="../main/poshuk.js"></script>
+    </div>
+</body>
+</html>

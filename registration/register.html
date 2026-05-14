@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel ="stylesheet" href="register.css">
+    <link rel="stylesheet" href ="../main/style.css">
+</head>
+<body>
+    <div class="main_content">
+       <div class="top-banner">
+            <div class="banner-container">
+                <img src="../Tovar/header.jpg" alt="Рекламний банер іграшок">
+            </div>
+        </div>
+        <header class="top-header">
+            <div class="header-container">
+                <a href="../main/index.html" class="logo">
+                    <span>Іграшковий</span> магазинчик
+                </a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Що ви шукаєте?">
+                    <button id="searchBtn">Пошук</button>
+                </div>
+                <div class="header-actions">
+                    <a href="../koshik/cart.html" class="action-item">
+                        <div class="icon-wrap">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="badge">0</span>
+                        </div>
+                        <span>Кошик</span>
+                    </a>
+                    <a href="../authorization/auth.html" class="action-item">
+                        <div class="icon-wrap">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <span>Вхід</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <div class="nav-container">
+                <a href="../catalog/catalog.php" class="catalog-btn">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>Каталог</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="../brands/brands.html">Бренди</a></li>
+                    <li><a href="../dostavka/oplata.html">Оплата та доставка</a></li>
+                    <li><a href="../kontakti/kontakti.html">Контакти</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1>Реєстрація</h1>
+        <div class="register_container">
+            <form id="register_form" method = "post" action="register.php">
+                <input type="text" id="name" placeholder="Ваше ім'я" name="first_name">
+                <div class="error_message" id="name_error"></div>
+                <input type="text" id="last_name" placeholder="Ваше прізвище" name="last_name">
+                <div class="error_message" id="last_name_error"></div>
+                <input type="email" id="email" placeholder="Ваш e-mail" name="email">
+                <div class="error_message" id="email_error"></div>
+                <input type="password" id="password" placeholder="Введіть пароль" name="password">
+                <div class="error_message" id="password_error"></div>
+                <input type="password" id="confirm_password" placeholder="Підтвердіть пароль" name="confirm_password">
+                <div class="error_message" id="confirm_password_error"></div>
+                <button type="submit">Зареєструватися</button>
+                <h3>Увійти через соц.мережі</h3>
+                <a href="#"><img src="../Tovar/google.png" alt="Google" class="google-icon"></a> 
+            </form>
+        </div>
+        <footer>Розробник: Іванченко Олександр студент групи ІТ-31/2</footer>
+    </div>
+    <script src="../main/check_user.js"></script>
+</body>
+</html>

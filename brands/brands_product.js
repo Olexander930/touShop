@@ -1,0 +1,22 @@
+const brandsData = [
+    { name: "Baby Born", image: "img/brands/baby-born.jpg" },
+    { name: "Barbie", image: "img/brands/barbie.jpg" },
+    { name: "Bratz", image: "img/brands/bratz.jpg" },
+    { name: "Chicco", image: "img/brands/chicco.jpg" },
+    { name: "Crayola", image: "img/brands/crayola.jpg" },
+    { name: "DJI", image: "img/brands/dji.jpg" },
+    { name: "Fisher-Price", image: "img/brands/fisher-price.jpg" },
+    { name: "Funko Pop", image: "img/brands/funko.jpg" },
+    { name: "Hasbro", image: "img/brands/hasbro.jpg" },
+    { name: "Hot Wheels", image: "img/brands/hot-wheels.jpg" },
+    { name: "Kite", image: "img/brands/kite.jpg" },
+    { name: "LEGO", image: "img/brands/lego.jpg" },
+    { name: "L.O.L. Surprise", image: "img/brands/lol.jpg" },
+    { name: "Mattel", image: "img/brands/mattel.jpg" },
+    { name: "Nerf", image: "img/brands/nerf.jpg" },
+    { name: "Play-Doh", image: "img/brands/play-doh.jpg" },
+    { name: "Ravensburger", image: "img/brands/ravensburger.jpg" },
+    { name: "Spin Master", image: "img/brands/spin-master.jpg" },
+    { name: "Sylvanian Families", image: "img/brands/sylvanian.jpg" },
+    { name: "Tiny Love", image: "img/brands/tiny-love.jpg" }
+];

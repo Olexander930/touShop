@@ -1,0 +1,131 @@
+.product-page-wrapper {
+    max-width: 1200px;
+    margin: 30px auto 50px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.product-container {
+    display: flex;
+    gap: 50px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.product-gallery {
+    flex: 1;
+    max-width: 450px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fafafa;
+}
+
+.product-gallery img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-title-big {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.product-status {
+    color: #27ae60;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.product-status::before {
+    content: '\2714';
+}
+
+.product-price-big {
+    font-size: 36px;
+    font-weight: 800;
+    color: #e9008c;
+    margin-bottom: 30px;
+}
+
+.product-description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.product-description h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.product-description ul {
+    margin-top: 15px;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.product-description ul li {
+    margin-bottom: 8px;
+}
+
+.buy-btn-big {
+    background: #e9008c;
+    color: #fff;
+    border: none;
+    padding: 18px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.buy-btn-big:hover {
+    background: #c70077;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(233, 0, 140, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px;
+    }
+    
+    .product-gallery {
+        max-width: 100%;
+    }
+    
+    .buy-btn-big {
+        width: 100%;
+        justify-content: center;
+    }
+}

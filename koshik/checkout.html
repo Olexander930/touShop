@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформлення замовлення</title>
+    <link rel="stylesheet" href="../main/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <div class="main_content">
+        <div class="top-banner">
+            <div class="banner-container">
+                <img src="../Tovar/header.jpg" alt="Рекламний банер іграшок">
+            </div>
+        </div>
+        
+        <header class="top-header">
+            <div class="header-container">
+                <a href="../main/index.html" class="logo">
+                    <span>Іграшковий</span> магазинчик
+                </a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Що ви шукаєте?">
+                    <button id="searchBtn">Пошук</button>
+                </div>
+                <div class="header-actions">
+                </div>
+            </div>
+        </header>
+        
+        <nav>
+            <a href="../catalog/catalog.php" class="catalog-btn">
+                <i class="fa-solid fa-bars"></i>
+                <span>Каталог</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../brands/brands.html">Бренди</a></li>
+                <li><a href="../dostavka/oplata.html">Оплата та доставка</a></li>
+                <li><a href="../kontakti/kontakti.html">Контакти</a></li>
+            </ul>
+        </nav>
+        
+        <main class="checkout-page">
+            <h2 class="checkout-title">
+                <i class="fa-solid fa-clipboard-check"></i> Оформлення замовлення
+            </h2>
+            
+            <div class="checkout-layout">
+                <div class="checkout-items-col">
+                    <h3>Ваше замовлення</h3>
+                    <div id="checkout-items">
+                        <p style="color: #888; text-align: center; padding: 20px;">Кошик порожній</p>
+                    </div>
+                    <div class="checkout-total" id="checkoutTotal">
+                        Разом: <span>0 грн</span>
+                    </div>
+                </div>
+                <div class="checkout-form-col">
+                    <div class="order-form">
+                        <h3><i class="fa-solid fa-truck"></i> Деталі замовлення</h3>
+                        <h4 class="form-section-title">Контактні дані</h4>
+                        <div class="form-row">
+                            <div class="form-group form-col">
+                                <label>Ім'я *</label>
+                                <input type="text" id="orderFirstName" placeholder="Введіть ім'я">
+                            </div>
+                            <div class="form-group form-col">
+                                <label>Прізвище *</label>
+                                <input type="text" id="orderLastName" placeholder="Введіть прізвище">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group form-col">
+                                <label>Телефон *</label>
+                                <input type="tel" id="orderPhone" placeholder="+38 (0__) ___-__-__">
+                            </div>
+                            <div class="form-group form-col">
+                                <label>Email</label>
+                                <input type="email" id="orderEmail" placeholder="Ваш email">
+                            </div>
+                        </div>
+
+                        <!-- Розділ: Доставка -->
+                        <h4 class="form-section-title">Доставка</h4>
+                        <div class="form-group">
+                            <label>Місто / Населений пункт *</label>
+                            <input type="text" id="orderCity" placeholder="Наприклад: Київська обл., м. Київ">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group form-col">
+                                <label>Спосіб доставки *</label>
+                                <select id="orderDelivery">
+                                    <option value="" disabled selected>Оберіть спосіб</option>
+                                    <option value="nova_poshta">Нова Пошта (у відділення)</option>
+                                    <option value="nova_poshta_courier">Нова Пошта (кур'єр)</option>
+                                    <option value="ukrposhta">Укрпошта</option>
+                                    <option value="pickup">Самовивіз (м. Суми)</option>
+                                </select>
+                            </div>
+                            <div class="form-group form-col">
+                                <label>Відділення / Адреса *</label>
+                                <input type="text" id="orderAddress" placeholder="№ відділення або вулиця">
+                            </div>
+                        </div>
+                        <h4 class="form-section-title">Оплата</h4>
+                        <div class="form-group">
+                            <label>Спосіб оплати *</label>
+                            <select id="orderPayment">
+                                <option value="card">Оплата карткою онлайн (Visa/Mastercard)</option>
+                                <option value="cod">Накладений платіж (при отриманні)</option>
+                                <option value="cash">Готівкою (при самовивозі)</option>
+                            </select>
+                        </div>
+                        <h4 class="form-section-title">Додатково</h4>
+                        <div class="form-group">
+                            <label>Коментар до замовлення</label>
+                            <textarea id="orderComment" rows="2" placeholder="Побажання щодо часу доставки, пакування тощо..."></textarea>
+                        </div>
+
+                        <button class="btn-submit-order" onclick="submitCheckout()">
+                            <i class="fa-solid fa-check"></i> Підтвердити замовлення
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div> 
+    
+    <footer>Розробник: Іванченко Олександр студент групи ІТ-31/2</footer>
+    
+    <script src="checkout.js"></script>
+    <script src="../main/check_user.js"></script>
+</body>
+</html>

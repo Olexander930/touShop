@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Додати товар | Адмін-панель</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="add_product.css">
+</head>
+<body>
+<div class="form-wrapper">
+    <div class="form-container">
+        <div class="form-header">
+            <h1>Додати новий товар</h1>
+        </div>
+        <form id="productForm" action="add_product.php" method="POST">
+            <div class="form-group">
+                <label for="p_name">Назва товару</label>
+                <input type="text" id="p_name" name="p_name" required>
+            </div>
+            <div class="form-group">
+                <label for="catid">Категорія товару</label>
+                <select id="catid" name="catid" required>
+                    <option value="1">Конструктори</option>
+                    <option value="2">Машинки</option>
+                    <option value="3">Ляльки</option>
+                    <option value="4">Настільні ігри</option>
+                    <option value="5">М'які іграшки</option>
+                    <option value="6">Розвиваючі іграшки</option>
+                    <option value="7">Іграшки для немовлят</option>
+                    <option value="8">Товари для школи</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="p_price">Ціна (грн)</label>
+                <input type="number" step="0.01" id="p_price" name="p_price" required>
+            </div>
+            <div class="form-group">
+                <label for="image_name">Назва файлу фото</label>
+                <input type="text" id="image_name" name="image_name" placeholder="Наприклад: cars_1.jpg" required>
+             </div>
+            <div class="form-group">
+                <label for="description">Опис</label>
+                <textarea id="description" name="description" rows="5"></textarea>
+            </div>
+            <button type="submit"class="btn-submit">Створити товар
+            </button>
+        </form>
+        <div class="back-wrapper">
+            <a href="../dashboard/admin_dashboard.php"class="btn-back"> Назад </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

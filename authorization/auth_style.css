@@ -1,0 +1,95 @@
+h1{
+    margin-bottom:20px;
+    text-align: center;
+    margin-top: 35px;
+    color: #333;
+}
+.auth-container{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-top: 5px solid #ff7f50;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#auth-form input[type="email"],
+#auth-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+#auth-form input[type="email"]:focus,
+#auth-form input[type="password"]:focus {
+    border-color: #ff7f50;
+}
+
+#auth-form button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer; 
+    transition: background-color 0.3s;
+}
+
+#auth-form button[type="submit"] {
+    background-color: #ff7f50;
+    color: white;
+    margin-top: 15px;
+}
+
+#auth-form button[type="submit"]:hover {
+    background-color: #e85d2a;
+}
+
+#auth-form button[type="button"] {
+    background-color: #f1f1f1;
+    color: #333;
+    margin-top: 10px;
+}
+
+#auth-form button[type="button"]:hover {
+    background-color: #e0e0e0;
+}
+
+#auth-form a {
+    color: #e9008c;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+#auth-form a:hover {
+    text-decoration: underline; 
+}
+
+#auth-form h3 {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #666;
+}
+
+.google-icon {
+    width: 80px;
+    margin: 0 auto;
+    display: block;
+}
+.error-msg {
+    color: red;
+    font-size: 12px;
+    display: none;
+    margin-bottom: 15px; 
+}
